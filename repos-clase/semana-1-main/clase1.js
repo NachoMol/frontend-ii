@@ -8,7 +8,13 @@ function iniciarJuego() {
     // guardamos en una variable en nombre ingresado
     const nombre = prompt("Ingese su nombre por favor:")
 
-    alert("Gracias por jugar " + nombre + ". ¡Mucha suerte!");
+    while( typeof(nombre) != String && nombre < 3){
+        
+        const nombre = prompt("El nombre no es valido. Ingese su nombre nuevamente por favor: ")
+
+    }
+
+    alert("Gracias por jugar " + nombre.toUpperCase + ". ¡Mucha suerte!");
 
     // mostramos los datos por consola
     console.log("----------------------------");
