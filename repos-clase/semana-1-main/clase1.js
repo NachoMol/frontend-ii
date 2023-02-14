@@ -6,15 +6,18 @@ function iniciarJuego() {
     // suludamos al usuario
     alert("Bienvenido al piedra papel o tijera de Frontend II.");
     // guardamos en una variable en nombre ingresado
-    const nombre = prompt("Ingese su nombre por favor:")
+    let nombre = prompt("Ingese su nombre por favor:")
 
-    while( typeof(nombre) != String && nombre < 3){
-        
-        const nombre = prompt("El nombre no es valido. Ingese su nombre nuevamente por favor: ")
+    while ( nombre.length < 3){
+        console.warn("El nombre no es valido")
+        nombre = prompt("El nombre no es valido. Ingese su nombre nuevamente por favor: ")
 
     }
 
-    alert("Gracias por jugar " + nombre.toUpperCase + ". ¡Mucha suerte!");
+    nombre = nombre.toUpperCase()
+
+    alert("Gracias por jugar " + nombre + ". ¡Mucha suerte!");
+
 
     // mostramos los datos por consola
     console.log("----------------------------");
