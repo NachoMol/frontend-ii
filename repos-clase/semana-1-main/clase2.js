@@ -87,10 +87,10 @@ const resultadoDePartida = compararJugadas()
 let mostrarResultado = texto => {
     console.log(texto);
 
-    alert(`El resultado es: ${texto}`)
+    alert(texto)
 
-    if(texto == RESULTADOS_POSIBLES[2]){
-        alert("Perdiste, pero intentalo nuevamente!")
+    if(texto == "Una lástima, perdiste."){
+        alert("Intentalo nuevamente!")
     }
 
 }
