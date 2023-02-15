@@ -8,7 +8,7 @@ function iniciarJuego() {
     // guardamos en una variable en nombre ingresado
     let nombre = prompt("Ingese su nombre por favor:")
 
-    while ( nombre.length < 3){
+    while ( nombre != null && nombre.length < 3){
         console.warn("El nombre no es valido")
         nombre = prompt("El nombre no es valido. Ingese su nombre nuevamente por favor: ")
 
