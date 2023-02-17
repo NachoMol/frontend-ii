@@ -146,7 +146,7 @@ while (puntajes.usuario < 2 && puntajes.computadora < 2) {
 
 alert(`Ganaste: ${puntajes.usuario} partidas, Empataste: ${puntajes.empates} partidas, Perdiste: ${puntajes.computadora} partidas`)
 confirm("Termino la partida. Deseas iniciar una nueva?")
-console.clear
+console.clear()
 }
 
 /* -------------------------------------------------------------------------- */
