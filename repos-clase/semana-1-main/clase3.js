@@ -112,7 +112,7 @@ let mostrarResultado = texto => {
 }
 
 
-let puntajes = {
+const puntajes = {
     usuario: 0,
     computadora: 0,
     empates: 0
@@ -133,7 +133,7 @@ while (puntajes.usuario < 2 && puntajes.computadora < 2) {
     console.log(resultadoDePartida);
     if (resultadoDePartida.includes("ganaste")) {
         puntajes.usuario++;
-    } else if (resultadoDePartida.includes("ganaste")) {
+    } else if (resultadoDePartida.includes("perdiste")) {
         puntajes.computadora++
     }else{
         puntajes.empates++
@@ -146,9 +146,7 @@ while (puntajes.usuario < 2 && puntajes.computadora < 2) {
 
 }
 
-
-
-alert(`Ganaste: ${puntajes.usuario} partidas, Empataste: ${puntajes.empates} partidas, Perdiste: ${puntajes.computadora} partidas`)
+alert(`Ganaste: ${puntajes[1]} partidas, Empataste: ${puntajes[3]} partidas, Perdiste: ${puntajes[2]} partidas`)
 console.log(`Ganaste: ${puntajes.usuario} partidas, Empataste: ${puntajes.empates} partidas, Perdiste: ${puntajes.computadora} partidas`);
 
 /* -------------------------------------------------------------------------- */
