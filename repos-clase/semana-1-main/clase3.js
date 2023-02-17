@@ -144,10 +144,10 @@ while (puntajes.usuario < 2 && puntajes.computadora < 2) {
     alert(`Tu puntaje es ${puntajes.usuario}`)
 }
 
+alert(`Ganaste: ${puntajes.usuario} partidas, Empataste: ${puntajes.empates} partidas, Perdiste: ${puntajes.computadora} partidas`)
+confirm("Termino la partida. Deseas iniciar una nueva?")
+console.clear
 }
-
-alert(`Ganaste: ${puntajes[1]} partidas, Empataste: ${puntajes[3]} partidas, Perdiste: ${puntajes[2]} partidas`)
-console.log(`Ganaste: ${puntajes.usuario} partidas, Empataste: ${puntajes.empates} partidas, Perdiste: ${puntajes.computadora} partidas`);
 
 /* -------------------------------------------------------------------------- */
 /*                          CONSIGNA MESA DE TRABAJO                          */
