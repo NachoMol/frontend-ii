@@ -1,6 +1,12 @@
-const template = '<h1>Hola mundo!</h1>'
+let escribirHTML = (titulo, texto) => {
+    const body = document.getElementById('body');
+    const miTemplate = `\
+    <h1>${titulo}</h1>
+    <p>${texto}</p>
+    
+    `;
 
-const body = document.getElementById('body');
+    body.innerHTML += miTemplate;
+}
 
-body.innerText = template;
-body.innerHTML = template;
+escribirHTML('hola','esto es el body')
