@@ -50,12 +50,31 @@ console.log(contenedorNoticias)
 // 2- Debemos preguntarle al usuario mediante un confirm si desea usar el modo oscuro.
 // 3- Si el usuario confirma debemos aplicar la clase "dark" al "sitio", si cancela debe quedar en modo claro.
 // 4- A su vez, si está en modo onsecuritypolicyviolation, el texto del boton debe decir "Cambiar a modo claro 🌞". De lo contrario, si está en modo claro debeb decir "Cambiar a modo oscuro 🌛"
-function elegirTema() {
-    let confirmModoOscuro = confirm("Presione confirmar para utilizar el modo Oscuro en esta web");
+// function elegirTema() {
+//     let confirmModoOscuro = confirm("Presione confirmar para utilizar el modo Oscuro en esta web");
 
-    if (confirmModoOscuro == true){
+//     if (confirmModoOscuro == true){
+//         sitio.classList.add('dark')
+//     }
+
+// }
+
+let cambiarTema = () =>{
+    let botonTema = document.querySelector('#botonTema');
+    if(!sitio.classList.contains('dark')){
         sitio.classList.add('dark')
+        botonTema.textContent= 'Modo Claro';
+        botonTema.title = "Cambiar a modo claro";
+        botonTema.classList.add('botonmodoOscuro');
+    }
+    else{
+        sitio.classList.remove('dark');
+        botonTema.textContent= 'Modo Oscuro ';
+        botonTema.title = "Cambiar a modo oscuro";
+        botonTema.classList.remove('botonModoOscuro');
     }
 
+
 }
-elegirTema();
+
+// elegirTema();

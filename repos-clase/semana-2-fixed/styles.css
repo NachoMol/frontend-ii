@@ -41,6 +41,11 @@ header h1 {
     color: white;
 }
 
+.botonModoOscuro {
+    color: black;
+    background-color: white;
+}
+
 .info {
     display: flex;
     gap: 2rem;
@@ -126,3 +131,9 @@ footer {
     background-color: black;
     color: white;
 }
+
+.dark .botonModoOscuro{
+    color: black;
+    background-color: white;
+}
+
