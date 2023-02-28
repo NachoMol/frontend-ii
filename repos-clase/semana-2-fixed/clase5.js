@@ -26,19 +26,19 @@ console.log(contenedorNoticias)
 /* ----------------------------- Editando clases ---------------------------- */
 
 // vamos probando uno a uno los métodos
-console.log(sitio.classList)
+// console.log(sitio.classList)
 
-console.log(sitio.classList.contains('dark'))
-console.log(sitio.classList)
+// console.log(sitio.classList.contains('dark'))
+// console.log(sitio.classList)
 
-console.log(sitio.classList.add('dark'))
-console.log(sitio.classList)
+// console.log(sitio.classList.add('dark'))
+// console.log(sitio.classList)
 
-console.log(sitio.classList.add('remove'))
-console.log(sitio.classList)
+// console.log(sitio.classList.add('remove'))
+// console.log(sitio.classList)
 
-console.log(sitio.classList.toggle('remove'))
-console.log(sitio.classList)
+// console.log(sitio.classList.toggle('remove'))
+// console.log(sitio.classList)
 
 
 
@@ -51,12 +51,11 @@ console.log(sitio.classList)
 // 3- Si el usuario confirma debemos aplicar la clase "dark" al "sitio", si cancela debe quedar en modo claro.
 // 4- A su vez, si está en modo onsecuritypolicyviolation, el texto del boton debe decir "Cambiar a modo claro 🌞". De lo contrario, si está en modo claro debeb decir "Cambiar a modo oscuro 🌛"
 function elegirTema() {
-    let confirmModoOscuro = confirm("Desea utilizar el modo oscuro en esta web?");
+    let confirmModoOscuro = confirm("Presione confirmar para utilizar el modo Oscuro en esta web");
 
-    if (confirmModoOscuro == false){
-        sitio.classList.remove('dark')
+    if (confirmModoOscuro == true){
+        sitio.classList.add('dark')
     }
-
 
 }
 elegirTema();
