@@ -65,7 +65,7 @@ let cambiarTema = () =>{
         sitio.classList.add('dark')
         botonTema.textContent= 'Modo Claro';
         botonTema.title = "Cambiar a modo claro";
-        botonTema.classList.add('botonmodoOscuro');
+        botonTema.classList.add('botonModoOscuro');
     }
     else{
         sitio.classList.remove('dark');
