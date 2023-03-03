@@ -1,4 +1,4 @@
-/* --------------------------- listado de almbumes --------------------------- */
+/* --------------------------- listado de albumes --------------------------- */
 const albumesFamosos = [
   {
     id: "x123",
@@ -18,7 +18,7 @@ const albumesFamosos = [
     nombre: "Thriller",
     imagen:
       "https://img.discogs.com/LfnH5tbhcZ4xRMNLAodIyvea9xA=/fit-in/600x600/filters:strip_icc():format(webp):mode_rgb():quality(90)/discogs-images/R-294033-1151290881.jpeg.jpg",
-    like: true,
+    like: false,
   },
   {
     id: "a987",
@@ -68,5 +68,30 @@ renderizarAlbumes(albumesFamosos);
 // sea necesario ( es decir: 1 album, 1 favorito / 2 albumes, 3 favoritos )
 function mostrarDatosEnPerfil() {
   // desarrollar la función 👇
+  let contadorFavoritos = 0;
+  let perfil = document.querySelector(".perfil");
+  let cantAlbums = document.querySelector("#cant-albums");
+  let cantFavoritos = document.querySelector("#cant-favoritos");
+
+  if(albumesFamosos.length == 1){
+    cantAlbums.innerHTML = `${albumesFamosos.length} álbum`;
+  }else{
+    cantAlbums.innerHTML = `${albumesFamosos.length} álbumes`;
+  }
+  
+
+  for(let i = 0; i < albumesFamosos.length ; i++){
+    if(albumesFamosos[i].like){
+      contadorFavoritos++;
+    }
+  }
+
+  if(contadorFavoritos == 1){
+    cantFavoritos.innerHTML = `${contadorFavoritos} álbum en tu listado`;
+  }else{
+    cantFavoritos.innerHTML = `${contadorFavoritos} álbumes en tu listado`;
+  }
+  
+
 }
 mostrarDatosEnPerfil();
