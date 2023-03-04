@@ -83,6 +83,8 @@ const listadoNoticias = [{
 // Ejemplo: si quiero insertar un titulo en el body, haría los siguiente:
 // document.querySelector('body').innerHTML += `<h1>Nuevo Título</h1>`;
 
+const main = document.querySelector("main.noticias")
+
 function renderizandoElementos() {
     // desarrollar la consigna aquí 
     listadoNoticias.forEach(noticias => {
