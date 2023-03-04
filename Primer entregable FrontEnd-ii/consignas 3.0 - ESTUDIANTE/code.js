@@ -37,23 +37,31 @@ function obtenerDatosDelUsuario() {
   /* --------------- PUNTO 1: Escribe tu codigo a partir de aqui --------------- */
 
   datosPersona.nombre = prompt("Ingrese su nombre: ")
-  datosPersona.anioNacimiento = prompt("Ingrese su año de nacimiento: ")
+  datosPersona.edad = 2023 - prompt("Ingrese su año de nacimiento: ")
   datosPersona.ciudad = prompt("Ingrese su ciudad de origen: ")
   datosPersona.interesPorJs = prompt("Tiene interés por JS? indique true / false")
 
 }
-console.log(datosPersona);
-obtenerDatosDelUsuario();
+
 
 function renderizarDatosUsuario() {
   /* ------------------- NO TOCAR NI ELIMINAR ESTA FUNCION. ------------------- */
   obtenerDatosDelUsuario();
   /* --------------- PUNTO 2: Escribe tu codigo a partir de aqui --------------- */
   
+  let indexNombre = document.querySelector("#nombre")
+  let indexEdad = document.querySelector("#edad")
+  let indexCiudad = document.querySelector("#ciudad")
+  let indexJS = document.querySelector("#javascript")
 
+  indexNombre.innerHTML += datosPersona.nombre
+  indexEdad.innerHTML += datosPersona.edad
+  indexCiudad.innerHTML += datosPersona.ciudad
+  indexJS.innerHTML += datosPersona.interesPorJs
 
 }
 
+renderizarDatosUsuario();
 
 function recorrerListadoYRenderizarTarjetas() {
   /* ------------------ PUNTO 3: Escribe tu codigo desde aqui ------------------ */
