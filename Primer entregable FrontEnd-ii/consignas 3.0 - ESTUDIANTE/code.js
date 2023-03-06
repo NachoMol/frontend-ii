@@ -122,3 +122,13 @@ function alternarColorTema() {
 
 /* --------------------- PUNTO 5: Escribe tu codigo aqui --------------------- */
 
+let textoOculto = document.getElementById("sobre-mi")
+
+document.addEventListener("keydown", function(e){
+
+  if(e.key == "f"){
+    textoOculto.classList.remove("oculto")
+  }
+
+
+})
