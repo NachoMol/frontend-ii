@@ -77,16 +77,32 @@ function recorrerListadoYRenderizarTarjetas() {
       
       <article class="caja">
       
-        <image "src= ${item.imgUrl}" "alt= ${item.lenguajes}"></image>
+        <image src= "${item.imgUrl}" alt= "${item.lenguajes}"></image>
         <p class="lenguajes">"${item.lenguajes}"</p>
         <p class="bimestre">"${item.bimestre}"</p>
 
       </article>
       `
-      
+    
     });
 
-    botonMaterias.removeEventListener(onclick)
+    botonMaterias.removeEventListener('click',function(){
+
+      listado.forEach(item => {
+        fila.innerHTML += `
+        
+        <article class="caja">
+        
+          <image src= "${item.imgUrl}" alt= "${item.lenguajes}"></image>
+          <p class="lenguajes">"${item.lenguajes}"</p>
+          <p class="bimestre">"${item.bimestre}"</p>
+  
+        </article>
+        `
+      
+      });
+
+    })
 
   })
 
