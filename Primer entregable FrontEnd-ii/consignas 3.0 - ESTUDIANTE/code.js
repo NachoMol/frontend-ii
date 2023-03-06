@@ -67,36 +67,22 @@ function recorrerListadoYRenderizarTarjetas() {
   /* ------------------ PUNTO 3: Escribe tu codigo desde aqui ------------------ */
   
 
-  let botonMaterias = document.querySelector("#obtener-materias")
-  let fila = document.querySelector("#fila")
+  let botonMaterias = document.getElementById("obtener-materias")
+  let fila = document.getElementById("fila")
 
   botonMaterias.addEventListener(onclick, function(){
 
     listado.forEach(item => {
-      let articulo = document.createElement("article")
-      articulo.classList.add('tarjeta')
-
-      let imagen = document.createElement(img)
-      imagen.setAttribute(src, `${item.imgUrl}`)
-      imagen.setAttribute(alt, `${item.lenguajes}`)
+      fila.innerHTML += `
       
-      document.articulo.appendChild(imagen)
+      <article class="caja">
+      
+        <image src= ${item.imgUrl} alt= ${item.lenguajes} ></image>
+        <p class="lenguajes">${item.lenguajes}</p>
+        <p class="bimestre">${item.bimestre}</p>
 
-      let lenguajes = document.createElement(p)
-      let contenidoLenguajes = document.createTextNode(`${listado.lenguajes}`)
-      lenguajes.appendChild(contenidoLenguajes)
-      lenguajes.classList.add('lenguajes')
-
-      document.articulo.appendChild(lenguajes)
-
-      let bimestre = document.createElement(p)
-      let contenidoBimestre = document.createTextNode(`${listado.bimestre}`)
-      lenguajes.appendChild(contenidoBimestre)
-      lenguajes.classList.add('bimestre')
-
-      document.articulo.appendChild(bimestre)
-
-      document.fila.appendChild(articulo)
+      </article>
+      `
       
     });
 
@@ -105,6 +91,8 @@ function recorrerListadoYRenderizarTarjetas() {
   })
 
 }
+
+recorrerListadoYRenderizarTarjetas()
 
 function alternarColorTema() {
   /* --------------------- PUNTO 4: Escribe tu codigo aqui --------------------- */
