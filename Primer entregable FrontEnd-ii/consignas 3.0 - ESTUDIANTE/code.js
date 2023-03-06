@@ -73,10 +73,34 @@ function recorrerListadoYRenderizarTarjetas() {
   botonMaterias.addEventListener(onclick, function(){
 
     listado.forEach(item => {
+      let articulo = document.createElement("article")
+      articulo.classList.add('tarjeta')
 
+      let imagen = document.createElement(img)
+      imagen.setAttribute(src, `${item.imgUrl}`)
+      imagen.setAttribute(alt, `${item.lenguajes}`)
       
+      document.articulo.appendChild(imagen)
+
+      let lenguajes = document.createElement(p)
+      let contenidoLenguajes = document.createTextNode(`${listado.lenguajes}`)
+      lenguajes.appendChild(contenidoLenguajes)
+      lenguajes.classList.add('lenguajes')
+
+      document.articulo.appendChild(lenguajes)
+
+      let bimestre = document.createElement(p)
+      let contenidoBimestre = document.createTextNode(`${listado.bimestre}`)
+      lenguajes.appendChild(contenidoBimestre)
+      lenguajes.classList.add('bimestre')
+
+      document.articulo.appendChild(bimestre)
+
+      document.fila.appendChild(articulo)
       
     });
+
+    botonMaterias.removeEventListener(onclick)
 
   })
 
