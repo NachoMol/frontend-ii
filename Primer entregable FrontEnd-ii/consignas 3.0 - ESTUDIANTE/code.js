@@ -67,6 +67,18 @@ function recorrerListadoYRenderizarTarjetas() {
   /* ------------------ PUNTO 3: Escribe tu codigo desde aqui ------------------ */
   
 
+  let botonMaterias = document.querySelector("#obtener-materias")
+  let fila = document.querySelector("#fila")
+
+  botonMaterias.addEventListener(onclick, function(){
+
+    listado.forEach(item => {
+
+      
+      
+    });
+
+  })
 
 }
 
