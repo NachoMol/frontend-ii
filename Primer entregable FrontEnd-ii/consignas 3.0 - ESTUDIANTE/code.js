@@ -54,10 +54,10 @@ function renderizarDatosUsuario() {
   let indexCiudad = document.querySelector("#ciudad")
   let indexJS = document.querySelector("#javascript")
 
-  indexNombre.innerHTML += datosPersona.nombre
-  indexEdad.innerHTML += datosPersona.edad
-  indexCiudad.innerHTML += datosPersona.ciudad
-  indexJS.innerHTML += datosPersona.interesPorJs
+  indexNombre.innerHTML = datosPersona.nombre
+  indexEdad.innerHTML = datosPersona.edad
+  indexCiudad.innerHTML = datosPersona.ciudad
+  indexJS.innerHTML = datosPersona.interesPorJs
 
 }
 
@@ -112,7 +112,9 @@ recorrerListadoYRenderizarTarjetas()
 
 function alternarColorTema() {
   /* --------------------- PUNTO 4: Escribe tu codigo aqui --------------------- */
- 
+  let sitio = document.getElementById("sitio")
+
+
   
 
 
