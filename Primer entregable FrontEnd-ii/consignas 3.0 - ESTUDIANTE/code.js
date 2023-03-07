@@ -63,16 +63,13 @@ function renderizarDatosUsuario() {
 
 renderizarDatosUsuario();
 
-function recorrerListadoYRenderizarTarjetas() {
+
   /* ------------------ PUNTO 3: Escribe tu codigo desde aqui ------------------ */
-  
-
-  let botonMaterias = document.getElementById("obtener-materias")
   let fila = document.getElementById("fila")
-
-  botonMaterias.addEventListener('click', function(){
-
+  function recorrerListadoYRenderizarTarjetas() {
+  
     listado.forEach(item => {
+
       fila.innerHTML += `
       
       <article class="caja">
@@ -84,31 +81,11 @@ function recorrerListadoYRenderizarTarjetas() {
       </article>
       `
     
-    });
+      }
+    )
 
-    botonMaterias.removeEventListener('click',function(){
-
-      listado.forEach(item => {
-        fila.innerHTML += `
-        
-        <article class="caja">
-        
-          <image src= "${item.imgUrl}" alt= "${item.lenguajes}"></image>
-          <p class="lenguajes">"${item.lenguajes}"</p>
-          <p class="bimestre">"${item.bimestre}"</p>
-  
-        </article>
-        `
-      
-      });
-
-    })
-
-  })
-
+    materiasBtn.removeEventListener("click", recorrerListadoYRenderizarTarjetas)
 }
-
-recorrerListadoYRenderizarTarjetas()
 
 function alternarColorTema() {
   /* --------------------- PUNTO 4: Escribe tu codigo aqui --------------------- */
@@ -129,6 +106,4 @@ document.addEventListener("keydown", function(e){
   if(e.key == "f"){
     textoOculto.classList.remove("oculto")
   }
-
-
 })
