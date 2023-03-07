@@ -49,24 +49,20 @@ marcarFavorito();
 
 function eliminarAlbum() {
   // desarrollar la función 👇
-
-  document.addEventListener("keydown", function(e){
-
-    if(e.key == "f" && e.key == "F"){
-      let albumEliminar = prompt("Ingrese el nombre del album que desea eliminar: ")
-
-      let index = albumesFamosos.findIndex(a => a.nombre.toLowerCase() == albumEliminar.toLowerCase())
-      if(index != -1){
-        albumesFamosos.splice(index,1)
-        renderizarAlbumes(albumesFamosos)
-        marcarFavorito()
-      }else{
-        alert("No ha ingresado un album válido")
+  document.addEventListener('keydown', e => {
+      const letter = e.key
+      if(letter === 'f' || letter === 'F'){
+          let delete_album = prompt('Ingrese el album a eliminar')
+          let find_index_album = albumesFamosos.findIndex(a => a.nombre.toLowerCase() === delete_album.toLowerCase())
+          if(find_index_album != -1){
+              albumesFamosos.splice(find_index_album, 1)
+              renderizarAlbumes(albumesFamosos)
+              marcarFavorito();
+          }else{
+              alert('Album no encontado')
+          }
       }
-    }
   })
-
-
 
 }
 eliminarAlbum();
