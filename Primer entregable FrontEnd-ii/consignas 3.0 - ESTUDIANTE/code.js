@@ -39,10 +39,15 @@ function obtenerDatosDelUsuario() {
   datosPersona.nombre = prompt("Ingrese su nombre: ")
   datosPersona.edad = 2023 - prompt("Ingrese su año de nacimiento: ")
   datosPersona.ciudad = prompt("Ingrese su ciudad de origen: ")
-  datosPersona.interesPorJs = prompt("Tiene interés por JS? indique true / false")
+  datosPersona.interesPorJs = confirm("Tiene interés por JS?")
+
+  if(datosPersona.interesPorJs){
+    datosPersona.interesPorJs = "Si"
+  }else{
+    datosPersona.interesPorJs = "No"
+  }
 
 }
-
 
 function renderizarDatosUsuario() {
   /* ------------------- NO TOCAR NI ELIMINAR ESTA FUNCION. ------------------- */
@@ -61,9 +66,6 @@ function renderizarDatosUsuario() {
 
 }
 
-renderizarDatosUsuario();
-
-
   /* ------------------ PUNTO 3: Escribe tu codigo desde aqui ------------------ */
   let fila = document.getElementById("fila")
   function recorrerListadoYRenderizarTarjetas() {
@@ -75,8 +77,8 @@ renderizarDatosUsuario();
       <article class="caja">
       
         <image src= "${item.imgUrl}" alt= "${item.lenguajes}"></image>
-        <p class="lenguajes">"${item.lenguajes}"</p>
-        <p class="bimestre">"${item.bimestre}"</p>
+        <p class="lenguajes"> Lenguaje: ${item.lenguajes}</p>
+        <p class="bimestre"> Bimestre: ${item.bimestre}</p>
 
       </article>
       `
