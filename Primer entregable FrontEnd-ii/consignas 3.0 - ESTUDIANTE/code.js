@@ -90,10 +90,8 @@ renderizarDatosUsuario();
 function alternarColorTema() {
   /* --------------------- PUNTO 4: Escribe tu codigo aqui --------------------- */
   let sitio = document.getElementById("sitio")
-
-  let botonTema = document.getElementById("cambiar-tema")
   
-  botonTema.addEventListener("click",sitio.classList.toggle("dark"))
+  sitio.classList.toggle("dark")
 
 }
 
