@@ -165,22 +165,13 @@ formulario.addEventListener("submit", function (evento) {
 
 function navegarPaginaExito() {
   // Deshabilita el botón y muestra el mensaje de "Cargando..."
-  let botonSubmit = document.querySelector("button[type='submit']");
+  const botonSubmit = document.querySelector("button[type='submit']");
   botonSubmit.setAttribute("disabled", true);
   botonSubmit.innerText = "Cargando...";
 
   // Espera tres segundos antes de cambiar la URL y actualizar el historial
   setTimeout(() => {
     // Cambia la URL
-    window.location.href = "usuario.html";
-  
-    // Actualiza la entrada del historial actual
-    history.replaceState(null, null, window.location.href);
-  
-    // Agrega un eventListener para el evento beforeunload
-    window.addEventListener("beforeunload", function(event) {
-      // Actualiza la entrada del historial una vez más justo antes de descargar la página actual
-      history.replaceState(null, null, window.location.href);
-    });
+  location.replace('./usuario.html');
   }, 3000);
 }
