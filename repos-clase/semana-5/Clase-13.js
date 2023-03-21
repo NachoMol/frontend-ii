@@ -165,9 +165,14 @@ formulario.addEventListener("submit", function (evento) {
 
 function navegarPaginaExito() {
   // Deshabilita el botón y muestra el mensaje de "Cargando..."
+  
   const botonSubmit = document.querySelector("button[type='submit']");
   botonSubmit.setAttribute("disabled", true);
   botonSubmit.innerText = "Cargando...";
+
+  const dataAEnviar =  JSON.stringify(estadoUsuario)
+  localStorage.setItem("datosUsuario", dataAEnviar)
+
 
   // Espera tres segundos antes de cambiar la URL y actualizar el historial
   setTimeout(() => {
