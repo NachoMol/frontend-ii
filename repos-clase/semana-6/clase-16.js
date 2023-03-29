@@ -129,4 +129,5 @@ function consultaAsincrona(texto) {
 
 function renderizarElementos(listado){
     // desarrollar la funcion 👇
+    
 }
