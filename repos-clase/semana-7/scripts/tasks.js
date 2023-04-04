@@ -218,7 +218,35 @@ window.addEventListener('load', function () {
   /* -------------------------------------------------------------------------- */
   function botonBorrarTarea() {
    
-    
+    const btnEliminar = document.querySelectorAll(".borrar")
+
+    btnEliminar.forEach( boton => {
+      // Asignar a cada botón un listener para poder capturar el id de la tarea a la cual clickeo
+      boton.addEventListener("click", (event) => { 
+        console.log("Eliminado tarea... ");
+        console.log(event.target);
+        console.log(event.target.id);
+        const id = event.target.id
+        const uriTareaId = `${uriTareas}/${id}`
+        const payload = {}
+
+        
+        const settings = {
+          method: "DELETE",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            authorization: token
+          }
+        }
+  
+        fetch( uriTareaId, settings )
+          .then( response => {
+            console.log(response.status);
+            consultarTareas()
+          })
+          .catch( err => console.log(err))
+       })
+    })
 
     
 
