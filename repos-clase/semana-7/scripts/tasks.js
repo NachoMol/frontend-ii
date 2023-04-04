@@ -228,7 +228,6 @@ window.addEventListener('load', function () {
         console.log(event.target.id);
         const id = event.target.id
         const uriTareaId = `${uriTareas}/${id}`
-        const payload = {}
 
         
         const settings = {
