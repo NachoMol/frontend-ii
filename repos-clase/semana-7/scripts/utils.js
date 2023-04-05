@@ -10,8 +10,11 @@ function normalizarTexto(texto) {
 
 /* ---------------------------------- email --------------------------------- */
 function validarEmail(email) {
-    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
-    return regex.test(email)
+    let arroba = "@"
+    if(email.includes(arroba) == false){
+        console.log("email invalido")
+        return false
+    }
 }
 
 function normalizarEmail(email) {
