@@ -24,6 +24,10 @@ window.addEventListener('load', function () {
             password: inputPassword.value
         }
 
+        if(datosRegistro.email == false){
+            return
+        }
+
         if (inputPassword.value === inputPasswordRepetida.value){
             realizarRegister(datosRegistro);
         }else{
