@@ -17,6 +17,8 @@ window.addEventListener('load', function () {
         
         event.preventDefault()
 
+        mostrarSpinner();
+
         const datosRegistro = {
             firstName: inputNombre.value,
             lastName: inputApellido.value,
@@ -57,12 +59,11 @@ window.addEventListener('load', function () {
             return response.json()
         })
         .then(resJS => {
+                ocultarSpinner();
                 localStorage.setItem("jwt", resJS.jwt)
                 location.replace("index.html")
         })
-        .catch( err => console.error(err))
-
-    };
-
-
+        .catch( err => {ocultarSpinner()
+            console.error(err)})
+    }
 });
